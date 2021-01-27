@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 2 Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- div element to add to from js -->
+    <div id="table1"></div>
+
+    <!-- template html to be rendered by flask app -->
+    <div class="jumbotron text-center">
+        <ol>
+        {% for name in data2 %}
+            <li>{{ name }}</li>
+        {% endfor %}
+        </ol>
+    </div>
+
+    <!-- link to static page, note automatically served from flask app,
+         no explicit route has to be written -->
+    <a href="html/second_page.html">Link to another page</a>
+    <br>
+    <a href="html/doggy_page.html">Link to doggy page</a>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="module" src="javascript/app.js"></script>
+</body>
+
+</html>
