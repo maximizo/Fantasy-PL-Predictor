@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project 2 Example</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Fantasy Soccer Overview</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="html/second_page.html">Another Page</a>
+                    <a class="dropdown-item" href="html/doggy_page.html">Doggy Page</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+    </nav>
+
+    <!-- Content-->
+    <!-- <div class="container"> -->
+    <div class="container-md"></div>
+
+        <!-- First and only row-->
+        <div class="row">
+
+            <!-- Column 1: Max Temperature -->
+            <div class="col-md-12">
+                <div class="box">
+                    <h1>Overview</h1>
+                    <hr>
+                    <h2>Project</h2>
+                    <hr>
+                    <p>Our project utilizes machine learning to help fantasy soccer players choose teams. Our machine learning model will use data on past player performance to predict future performance, allowing us to calculate a “bang for the buck” (expected points / player cost) metric for each player. We then built a tool allowing Fantasy participants to build a roster with their limited budget and see the predicted number of points they can expect to achieve.</p>
+                    <hr>
+                    <h2>Fantasy Soccer 101</h2>
+                    <hr>
+                    <p>Each week, participants select a team composed of 10 players (constrained by a budget of $100m) and receive points based on the players’ actual performance that week. Points are given based on goals scored, goals assisted, play time, penalty saves, and other metrics; points are also deducted based on player misconduct (red and yellow cards), penalty misses, own goals, and goal concessions. The full scoring rules are available here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- div element to add to from js -->
-    <div id="table1"></div>
+    <!-- <div id="table1"></div> -->
 
     <!-- template html to be rendered by flask app -->
-    <div class="jumbotron text-center">
+    <!-- <div class="jumbotron text-center">
         <ol>
         {% for name in data2 %}
             <li>{{ name }}</li>
         {% endfor %}
         </ol>
-    </div>
-
-    <!-- link to static page, note automatically served from flask app,
-         no explicit route has to be written -->
-    <a href="html/second_page.html">Link to another page</a>
-    <br>
-    <a href="html/doggy_page.html">Link to doggy page</a>
+    </div> -->
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="module" src="javascript/app.js"></script>
