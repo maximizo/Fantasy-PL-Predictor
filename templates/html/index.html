@@ -8,7 +8,8 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
     </head>
 
 <body>
@@ -36,28 +37,108 @@
     </nav>
 
     <!-- Content-->
-    <!-- <div class="container"> -->
-    <div class="container-md"></div>
 
-        <!-- First and only row-->
+    <div class="container">
         <div class="row">
-
-            <!-- Column 1: Max Temperature -->
-            <div class="col-md-12">
-                <div class="box">
-                    <h1>Overview</h1>
-                    <hr>
-                    <h2>Project</h2>
-                    <hr>
-                    <p>Our project utilizes machine learning to help fantasy soccer players choose teams. Our machine learning model will use data on past player performance to predict future performance, allowing us to calculate a “bang for the buck” (expected points / player cost) metric for each player. We then built a tool allowing Fantasy participants to build a roster with their limited budget and see the predicted number of points they can expect to achieve.</p>
-                    <hr>
-                    <h2>Fantasy Soccer 101</h2>
-                    <hr>
-                    <p>Each week, participants select a team composed of 10 players (constrained by a budget of $100m) and receive points based on the players’ actual performance that week. Points are given based on goals scored, goals assisted, play time, penalty saves, and other metrics; points are also deducted based on player misconduct (red and yellow cards), penalty misses, own goals, and goal concessions. The full scoring rules are available here.</p>
-                </div>
+            <div class = "col-md-12">
+                <h1 class="text-center">Premier League Fantasy Soccer</h1>
+                <h3 class ="text-center">Luis Bejaran, Megan Cogguillo, Juliassa Guzman, and Max Izotov </h3>
+                <hr>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Our Project</h2>
+                <p>Our project utilizes machine learning to help fantasy soccer players choose teams. Our machine learning model will use data on past player performance to predict future performance, allowing us to calculate a “bang for the buck” (expected points / player cost) metric for each player. We then built a tool allowing Fantasy participants to build a roster with their limited budget and see the predicted number of points they can expect to achieve.</p>
+                <hr>
+                <h2>Fantasy Soccer 101</h2>
+                <p>Each week, participants select a team composed of 10 players (constrained by a budget of $100m) and receive points based on the players’ actual performance that week. Points are given based on goals scored, goals assisted, play time, penalty saves, and other metrics; points are also deducted based on player misconduct (red and yellow cards), penalty misses, own goals, and goal concessions. The full scoring rules are available here.</p>
+                <hr>
+                <h2>Scoring Rules</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Action</th>
+                            <th scope="col">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>For playing up to 60 minutes</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>For playing 60 minutes or more (excluding stoppage time)</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>For each goal scored by a goalkeeper or defender</td>
+                            <td>6</td>                       
+                        </tr>
+                        <tr>
+                            <td>For each goal scored by a midfielder</td>
+                            <td>5</td>                       
+                        </tr>
+                        <tr>
+                            <td>For each goal scored by a forwards</td>
+                            <td>4</td>                       
+                        </tr>
+                        <tr>
+                            <td>For each goal assist</td>
+                            <td>3</td>                       
+                        </tr>
+                        <tr>
+                            <td>For a clean sheet by a goalkeeper or defender</td>
+                            <td>4</td>                       
+                        </tr>
+                        <tr>
+                            <td>For a clean sheet by a midfielder</td>
+                            <td>1</td>                       
+                        </tr>
+                        <tr>
+                            <td>For every 3 shot saves by a goalkeeper</td>
+                            <td>1</td>                       
+                        </tr>
+                        <tr>
+                            <td>For each penalty save</td>
+                            <td>5</td>                       
+                        </tr>
+                        <tr>
+                            <td>For each penalty miss</td>
+                            <td>-2</td>                       
+                        </tr>
+                        <tr>
+                            <td>Bonus points for the best players in a match</th>
+                            <td>1-3</td>                       
+                        </tr>
+                        <tr>
+                            <td>For every 2 goals conceded by a goalkeeper or defender</th>
+                            <td>-1</td>                       
+                        </tr>
+                        <tr>
+                            <td>For each yellow card</th>
+                            <td>-1</td>                       
+                        </tr>
+                        <tr>
+                            <td>For red yellow card</th>
+                            <td>-3</td>                       
+                        </tr>
+                        <tr>
+                            <td>For each own goal</th>
+                            <td>-2</td>                       
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <img src="images/gameweekpts.jpg" class="img-fluid" alt="Fantasy Team">
+            </div>
+
+        </div>
     </div>
+
 
     <!-- div element to add to from js -->
     <!-- <div id="table1"></div> -->
