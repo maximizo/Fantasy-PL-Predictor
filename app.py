@@ -13,6 +13,10 @@ def index():
 def machinelearning():
     return render_template('html/machine_learning.html')
 
+@app.route('/visualizations')
+def visualizations():
+    return render_template('html/graph.html')
+
 # serve data from the flask app
 @app.route('/data')
 def data1():
