@@ -54,6 +54,14 @@ li {
     text-align: left
 }
 
+ol {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 16px;
+    color: black;
+    text-align: left
+}
+
 p {
     padding: 10px 10px;
     margin: 0;
